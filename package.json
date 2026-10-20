@@ -1,0 +1,24 @@
+{
+  "name": "resonance",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check dist/presets.js && node --check dist/app.js && node --check dist/audio-features.js && node --check dist/lib/resonance.js && node --check live-edit.mjs && tsc -p jsconfig.json",
+    "test": "node test-audio.cjs && node test-library.cjs",
+    "live": "node live-edit.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "typescript": "5.9.3"
+  },
+  "description": "A WebGL music visualizer with Meyda audio analysis, live controls, and composable JavaScript scenes.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericvicenti/resonance.git"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

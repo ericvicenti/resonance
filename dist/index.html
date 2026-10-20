@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#05080d" />
+    <title>Resonance — sound into light</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="vendor/meyda-5.6.3.min.js"></script>
+    <script defer src="audio-features.js"></script>
+    <script defer src="lib/resonance.js"></script>
+    <script defer src="presets.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <canvas
+      id="visual"
+      aria-label="Audio-reactive flowing light sculpture"
+    ></canvas>
+    <header class="chrome">
+      <div class="wordmark">
+        <span class="logo">◉</span> RESONANCE
+        <span class="edition">LIVE / SYSTEM AUDIO</span>
+      </div>
+      <button
+        id="fullscreen"
+        title="Fullscreen (F)"
+        aria-label="Toggle fullscreen"
+      >
+        ⛶
+      </button>
+    </header>
+    <main class="chrome">
+      <div class="eyebrow">
+        <span id="dot"></span
+        ><span id="state">AMBIENT · CHOOSE AN AUDIO SOURCE</span>
+      </div>
+      <h1>FEEL THE FREQUENCY.</h1>
+      <p id="message" role="status">Connect your computer audio. Turn it up.</p>
+    </main>
+    <aside class="chrome meters" aria-label="Audio feature levels">
+      <div>
+        <span>LOW</span><i><b id="low"></b></i>
+      </div>
+      <div>
+        <span>MID</span><i><b id="mid"></b></i>
+      </div>
+      <div>
+        <span>HIGH</span><i><b id="high"></b></i>
+      </div>
+      <span class="engine">ONSET <strong id="beat">000</strong></span>
+    </aside>
+    <footer class="chrome">
+      <div class="controls">
+        <button id="share" class="primary">Listen to computer audio</button
+        ><button id="file">Open music</button
+        ><input type="file" id="upload" accept="audio/*" hidden /><button
+          id="demo"
+          title="Play a synthesized music loop"
+        >
+          Demo</button
+        ><button id="stop" hidden>Stop</button><span class="separator"></span
+        ><label class="sensitivity"
+          >Sensitivity<input
+            id="gain"
+            type="range"
+            min="0.25"
+            max="3"
+            step="0.05"
+            value="1"
+            aria-label="Audio sensitivity" /></label
+        ><button id="palette" title="Change palette (C)">ION ↗</button>
+      </div>
+      <div class="bottom">
+        <span id="source">ALL AUDIO STAYS ON THIS DEVICE</span
+        ><span
+          >F FULLSCREEN <em>·</em> H HIDE CONTROLS <em>·</em> C COLOR
+          <em>·</em> V VISUAL</span
+        >
+      </div>
+      <audio id="player" controls hidden></audio>
+    </footer>
+    <button id="reveal" aria-label="Show controls">⌘</button>
+  </body>
+</html>

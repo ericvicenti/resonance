@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+
+.live-edit/
+
+.env
+.env.*
+*.log

@@ -1,0 +1,13 @@
+{
+  "files.autoSave": "off",
+  "files.exclude": { ".live-edit": true },
+  "search.exclude": { "dist/vendor": true, "package-lock.json": true },
+  "editor.tabSize": 2,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#123139",
+    "titleBar.activeForeground": "#d2f6ed",
+    "statusBar.background": "#123139",
+    "statusBar.foreground": "#d2f6ed"
+  },
+  "window.title": "RESONANCE → CLIPPER · ${activeEditorShort}"
+}
